@@ -3,7 +3,7 @@
   "version": "2.2.3",
   "description": "RxJS powered Redux for Angular2 apps",
   "main": "./bundles/store.umd.js",
-  "module": "./index.js",
+  "module": "./release/index.js",
   "scripts": {
     "karma": "karma start --single-run",
     "test:unit": "npm run karma",

@@ -1,4 +1,4 @@
-import { OpaqueToken, NgModule, ModuleWithProviders } from '@angular/core';
+import { InjectionToken, NgModule, ModuleWithProviders } from '@angular/core';
 
 import { Reducer } from './reducer';
 import { Dispatcher } from './dispatcher';
@@ -6,11 +6,11 @@ import { Store } from './store';
 import { State } from './state';
 import { combineReducers } from './utils';
 
-export const INITIAL_REDUCER = new OpaqueToken('Token ngrx/store/reducer');
-export const INITIAL_STATE = new OpaqueToken('Token ngrx/store/initial-state');
+export const INITIAL_REDUCER = new InjectionToken<any>('Token ngrx/store/reducer');
+export const INITIAL_STATE = new InjectionToken<any>('Token ngrx/store/initial-state');
 
-export const _INITIAL_REDUCER = new OpaqueToken('Token _ngrx/store/reducer');
-export const _INITIAL_STATE = new OpaqueToken('Token _ngrx/store/initial-state');
+export const _INITIAL_REDUCER = new InjectionToken<any>('Token _ngrx/store/reducer');
+export const _INITIAL_STATE = new InjectionToken<any>('Token _ngrx/store/initial-state');
 
 export function _initialReducerFactory(reducer) {
   if (typeof reducer === 'function') {
